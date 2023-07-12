@@ -3,15 +3,13 @@
 
 int blobDetect(int ** picture, int x, int y, int size);
 
-// Generate a picture with random 1s and 0s
-void generatePicture(int ** picture, int size) {
+void generatePicture(int ** picture, int size) { // Generate a picture with random 1s and 0s
     for (int r = 0; r < size; ++r)
         for (int c = 0; c < size; ++c)
-            picture[r][c] = rand() % 2; // generate random number between 0 and 1
+            picture[r][c] = rand() % 2; // Generate random number between 0 and 1
 }
 
-// Print the picture
-void printPicture(int ** picture, int size) {
+void printPicture(int ** picture, int size) { // Print the picture
     for (int r = 0; r < size; ++r) {
         for (int c = 0; c < size; ++c) {
             printf("%d ", picture[r][c]);
@@ -21,34 +19,48 @@ void printPicture(int ** picture, int size) {
 }
 
 int main() {
+    
   int seed;
+  int size;
+  
   printf("Enter seed: ");
+  
   scanf("%d", &seed);
   srand(seed); // set seed
 
   printf("Enter the size of the picture, r * c: ");
-  int size;
+  
   scanf("%d", &size);
 
-  // Allocate memory for the picture
-  int ** picture = (int **) malloc(size * sizeof(int *));
+  int ** picture = (int **) malloc(size * sizeof(int *));   // Allocate memory for the picture
+  
   if(picture == NULL) {
+      
       printf("Failed to allocate memory!\n");
       return 1;
+      
   }
+  
   for (int i = 0; i < size; ++i) {
+      
     picture[i] = (int *) malloc(size * sizeof(int));
     if(picture[i] == NULL) {
+        
         printf("Failed to allocate memory!\n");
         return 1;
+        
     }
+    
   }
 
   for (int test = 1; test <= 5; ++test) {
+      
     printf("Test %d\n", test);
+    
     generatePicture(picture, size);
 
     printf("Generated picture:\n");
+    
     printPicture(picture, size);
 
     int numblobs = 0;
@@ -58,13 +70,14 @@ int main() {
         if (blobDetect(picture, r, c, size) > 0)
           ++numblobs;
     printf("There are %d blob(s) in the picture.\n", numblobs);
+    
   }
 
-  // Free the allocated memory
-  for (int i = 0; i < size; ++i)
+  for (int i = 0; i < size; ++i) // Free the allocated memory
     free(picture[i]);
   free(picture);
   return 0;
+  
 }
 
 int blobDetect(int ** picture, int x, int y, int size) {
