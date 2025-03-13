@@ -9,8 +9,9 @@ Example:
 Input:
 Enter seed: 2
 Enter the size of the picture, r * c: 12
+```
 
-Output:
+```c
 Test 1
 Generated picture:
 0 1 0 1 1 0 0 1 1 1 0 1 
@@ -90,4 +91,4 @@ Generated picture:
 1 1 1 0 0 0 0 1 1 1 1 1
 
 There are 2 blob(s) in the picture.
-'''
+```
