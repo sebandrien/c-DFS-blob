@@ -31,6 +31,7 @@ Generated picture:
 1 0 0 0 1 0 0 0 0 1 1 0 
 0 1 0 1 0 0 1 1 0 1 1 1 
 There are 2 blob(s) in the picture.
+
 Test 2
 Generated picture:
 0 0 1 0 1 0 0 0 1 0 1 0 
@@ -46,8 +47,8 @@ Generated picture:
 1 1 1 0 1 1 1 0 1 1 1 0 
 0 0 0 1 1 1 1 1 0 1 1 0 
 There are 1 blob(s) in the picture.
-Test 3
 
+Test 3
 Generated picture:
 0 1 1 1 0 0 1 1 1 0 1 0 
 1 0 1 1 1 0 1 1 0 0 1 0 
@@ -93,6 +94,5 @@ Generated picture:
 1 1 1 0 1 1 1 0 0 0 0 0 
 1 0 1 0 1 0 1 1 1 0 1 1 
 1 1 1 0 0 0 0 1 1 1 1 1
-
 There are 2 blob(s) in the picture.
 ```
