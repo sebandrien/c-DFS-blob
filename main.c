@@ -3,22 +3,26 @@
 
 int blobDetect(int ** picture, int x, int y, int size);
 
-void generatePicture(int ** picture, int size) { // Generate a picture with random 1s and 0s
+void generatePicture(int ** picture, int size) // Generate a picture with random 1s and 0s
+{ 
     for (int r = 0; r < size; ++r)
         for (int c = 0; c < size; ++c)
             picture[r][c] = rand() % 2; // Generate random number between 0 and 1
 }
 
-void printPicture(int ** picture, int size) { // Print the picture
+void printPicture(int ** picture, int size) // Print the picture
+{ 
     for (int r = 0; r < size; ++r) {
-        for (int c = 0; c < size; ++c) {
+        for (int c = 0; c < size; ++c) 
+        {
             printf("%d ", picture[r][c]);
         }
         printf("\n");
     }
 }
 
-int main() {
+int main() 
+{
     
   int seed;
   int size;
@@ -26,7 +30,7 @@ int main() {
   printf("Enter seed: ");
   
   scanf("%d", &seed);
-  srand(seed); // set seed
+  srand(seed); // Set seed
 
   printf("Enter the size of the picture, r * c: ");
   
@@ -53,7 +57,8 @@ int main() {
     
   }
 
-  for (int test = 1; test <= 5; ++test) {
+  for (int test = 1; test <= 5; ++test) 
+  {
       
     printf("Test %d\n", test);
     
@@ -75,19 +80,25 @@ int main() {
 
   for (int i = 0; i < size; ++i) // Free the allocated memory
     free(picture[i]);
+    
   free(picture);
   return 0;
   
 }
 
-int blobDetect(int ** picture, int x, int y, int size) {
-  if (x < 0 || x >= size || y < 0 || y >= size) {
+int blobDetect(int ** picture, int x, int y, int size) 
+{
+  if (x < 0 || x >= size || y < 0 || y >= size) 
+  {
     return 0;
   }
 
-  if (picture[x][y] == 0) {
+  if (picture[x][y] == 0) 
+  {
     return 0;
-  } else {
+  } 
+  else 
+  {
     picture[x][y] = 0;
     return 1 + blobDetect(picture, x - 1, y - 1, size) +
            blobDetect(picture, x + 1, y - 1, size) +
