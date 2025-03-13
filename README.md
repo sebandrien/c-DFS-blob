@@ -5,7 +5,7 @@ Generates a binary image of random 1s and 0s and then counts the number of "blob
 
 Example:
 
-'''c
+```c
 Input:
 Enter seed: 2
 Enter the size of the picture, r * c: 12
@@ -42,6 +42,7 @@ Generated picture:
 0 0 0 1 1 1 1 1 0 1 1 0 
 There are 1 blob(s) in the picture.
 Test 3
+
 Generated picture:
 0 1 1 1 0 0 1 1 1 0 1 0 
 1 0 1 1 1 0 1 1 0 0 1 0 
@@ -56,6 +57,7 @@ Generated picture:
 0 0 1 0 0 1 1 0 1 1 1 1 
 1 1 0 1 1 1 0 0 0 1 1 0 
 There are 3 blob(s) in the picture.
+
 Test 4
 Generated picture:
 1 0 0 1 0 0 0 0 0 0 0 0 
@@ -71,6 +73,7 @@ Generated picture:
 1 1 0 1 0 0 0 0 0 1 1 0 
 0 1 1 0 0 1 0 0 0 1 1 0 
 There are 5 blob(s) in the picture.
+
 Test 5
 Generated picture:
 0 1 1 1 0 0 0 1 1 1 0 1 
@@ -84,6 +87,7 @@ Generated picture:
 1 1 1 0 0 0 0 1 1 1 1 1 
 1 1 1 0 1 1 1 0 0 0 0 0 
 1 0 1 0 1 0 1 1 1 0 1 1 
-1 1 1 0 0 0 0 1 1 1 1 1 
+1 1 1 0 0 0 0 1 1 1 1 1
+
 There are 2 blob(s) in the picture.
 '''
