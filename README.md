@@ -6,8 +6,7 @@ The main function prompts the user to enter a seed for random generation and a s
 
 For each test, blobDetect() is called to detect blobs by recursively visiting and "zeroing out" each connected 1 in a cluster. This function checks all eight neighboring cells to find connected components. After counting all blobs, it prints the result, cleans up the allocated memory, and exits. The program runs five tests by generating new pictures and counting blobs each time.
 
-
-Example:
+Output:
 
 ```c
 Input:
